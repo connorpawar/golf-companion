@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, View, Text } from 'react-native';
+import { View } from 'react-native';
 import { Card } from "../components/Card";
 import { Center, NativeBaseProvider } from 'native-base';
 
@@ -13,7 +13,6 @@ export const Courses = ({ navigation }) => {
     flex={1}
     >
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
       <Card 
         imageUrl='https://www.holidify.com/images/cmsuploads/compressed/Bangalore_citycover_20190613234056.jpg'
         title='Bangalore'
