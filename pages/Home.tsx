@@ -13,6 +13,10 @@ import {
   Button,
 } from "native-base";
 import NativeBaseIcon from "../components/NativeBaseIcon";
+import create from 'zustand';
+
+const useStore = create(set => ({
+}))
 
 export const Home = ({navigation}) => {
     return (
@@ -27,15 +31,19 @@ export const Home = ({navigation}) => {
                 <NativeBaseIcon />
                 <Heading size="lg">Welcome to my golf companion</Heading>
                 <HStack space={2} alignItems="center">
-                <Text>Edit</Text>
-                <Code>App.js</Code>
-                <Text>and save to reload.</Text>
+                <Text>The one tool to help track your game</Text>
                 </HStack>
                 <Link href="https://docs.nativebase.io" isExternal>
                 <Button
-                    onPress={() => navigation.navigate('Courses')}
+                marginRight={10}
+                    onPress={() => navigation.navigate('Login')}
                 >
-                    Go to Courses
+                    Login
+                </Button>
+                <Button
+                    onPress={() => navigation.navigate('SignUp')}
+                >
+                    SignUp
                 </Button>
                 </Link>
                 <ToggleDarkMode />
@@ -47,7 +55,7 @@ export const Home = ({navigation}) => {
 
 // Color Switch Component
 const ToggleDarkMode = () => {
-    const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode();
     return (
       <HStack space={2} alignItems="center">
         <Text>Dark</Text>
